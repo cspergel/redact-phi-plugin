@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "redact-phi": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "${CLAUDE_PLUGIN_ROOT}",
+        "run",
+        "server/mcp_server.py"
+      ],
+      "env": {
+        "REDACT_PHI_DATA_DIR": "${CLAUDE_PLUGIN_ROOT}/data"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "redact-phi",
+  "version": "0.1.0",
+  "description": "Seamlessly scrub ePHI from spreadsheets and conversations in Claude Cowork with round-trip re-identification",
+  "author": {
+    "name": "Redact Health"
+  },
+  "homepage": "https://redact.health",
+  "keywords": ["healthcare", "phi", "hipaa", "redaction", "de-identification"]
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redact-phi-plugin"
+version = "0.1.0"
+description = "Claude Cowork plugin for ePHI de-identification"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "openpyxl>=3.1.0",
+    "redactiphi @ git+https://github.com/cspergel/redact.git",
+]
+
+[project.optional-dependencies]
+local = [
+    "redactiphi",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["server*"]
